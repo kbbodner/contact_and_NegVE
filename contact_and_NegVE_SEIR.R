@@ -246,7 +246,7 @@ AoN_Homog_VE<-VE_function(vaccine.type="AllOrNothing", contact.type="Homog.")
 AoN_Heterog_VE<-VE_function(vaccine.type="AllOrNothing", contact.type="Heterog.")
 
 #Final dataset
-subset.homhet<-rbind(subset.Homog, subset.Heterog)
+subset.homhet<-rbind(AoN_Homog_VE, AoN_Heterog_VE)
 
 #Create label grouping with VE against Susc
 subset.homhet$indicator.contact.susc<-paste(subset.homhet$contact.type, subset.homhet$label.ve.susc, sep="; ")
